@@ -1,0 +1,4 @@
+[webservers]
+ansible02 
+[db]
+192.168.15.123
