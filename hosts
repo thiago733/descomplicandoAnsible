@@ -1,4 +1,5 @@
+[tower]
+ansible01
 [webservers]
 ansible02 
-[db]
-192.168.15.123
+ansible03 
