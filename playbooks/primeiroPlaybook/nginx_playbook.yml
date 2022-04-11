@@ -1,26 +1,21 @@
 - hosts: webservers
   become: yes
-  remote_user: ubuntu
+  remote_user: vagrant
   tasks:
   - name: Instalando o nginx
     apt:
       name: nginx
       state: latest
       update_cache: yes
-  - name: Iniciando o nginx
+  - name: Habilitando o nginx
     service:
+      name: nginx
+      enabled: yes
+  - name: Iniciando o nginx
+    service: 
       name: nginx
       state: started
   - name: Copiando index.html personalizado
     template:
-      src: index.html.j2
+      src: index.html
       dest: /var/www/html/index.html
-  - name: Copiando nginx.conf
-    copy:
-      src: nginx.conf
-      dest: /etc/nginx/nginx.conf
-    notify: Restartando o Nginx
-  handlers:
-  - name: Restartando o Nginx
-    service:
-      name: nginx

@@ -1,0 +1,5 @@
+[tower]
+ansible01
+[webservers]
+ansible02 
+ansible03 
