@@ -1,0 +1,2 @@
+- name: Instalando o Docker
+  shell: curl -fsSL https://get.docker.com | bash
