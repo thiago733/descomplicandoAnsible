@@ -1,0 +1,12 @@
+- hosts: webservers
+  become: yes
+  remote_user: vagrant
+  tasks:
+  - name: Instalando o nginx
+    apt:
+      name: nginx
+      state: absent
+  - name: Removendo index.html personalizado
+    file: 
+      path: '/var/www/html/index.html' 
+      state: absent

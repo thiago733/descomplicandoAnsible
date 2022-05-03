@@ -1,4 +1,0 @@
----
-# tasks file for install-k8s
-- include: instalaDocker.yml
-- include: instalaK8s.yml
