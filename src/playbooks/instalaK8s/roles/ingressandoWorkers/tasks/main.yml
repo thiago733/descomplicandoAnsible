@@ -1,0 +1,4 @@
+
+---
+# tasks file for join-workers
+- include: join-cluster.yml

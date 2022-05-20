@@ -1,0 +1,4 @@
+#  cat install_k8s/roles/install-monit-tools/tasks/main.yml
+---
+# tasks file for install-monit-tools
+- include: install-monit-tools.yml

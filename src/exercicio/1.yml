@@ -1,0 +1,4 @@
+# cat install_k8s/roles/install-helm/tasks/main.yml
+---
+# tasks file for install-helm
+- include: install-helm.ymlinstall_k8s/roles/install-helm/tasks/main.yml

@@ -1,0 +1,4 @@
+# cat deploy-app-v1/roles/deploy-app/tasks/main.yml
+---
+# tasks file for deploy-app
+- include: deploy-app.yml

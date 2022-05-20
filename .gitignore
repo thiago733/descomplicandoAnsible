@@ -7,3 +7,5 @@ id_rsa*
 
 ### Vagrant Patch ###
 *.box
+terraform.state
+terraform.state.backup

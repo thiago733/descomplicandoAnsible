@@ -1,0 +1,21 @@
+- hosts: webservers
+  become: yes
+  remote_user: vagrant
+  tasks:
+  - name: Instalando o nginx
+    apt:
+      name: nginx
+      state: latest
+      update_cache: yes
+  - name: Habilitando o nginx
+    service:
+      name: nginx
+      enabled: yes
+  - name: Iniciando o nginx
+    service: 
+      name: nginx
+      state: started
+  - name: Copiando index.html personalizado
+    template:
+      src: index.html.j2
+      dest: /var/www/html/index.html

@@ -1,0 +1,6 @@
+# cat deploy-app-v1/main.yml
+- hosts: k8s-master
+  become: yes
+  user: ubuntu
+  roles:
+  - { role: deploy-app, tags: ["deploy_app_role"]  }
