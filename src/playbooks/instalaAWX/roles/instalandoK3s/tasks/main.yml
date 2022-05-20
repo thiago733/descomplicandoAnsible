@@ -1,0 +1,4 @@
+---
+# tasks file for instalandoK3s
+- include: instalaDocker.yml
+- include: instalaK3s.yml

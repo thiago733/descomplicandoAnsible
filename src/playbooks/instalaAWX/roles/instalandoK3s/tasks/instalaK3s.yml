@@ -1,0 +1,2 @@
+- name: Instalando o K3s
+  shell: curl -sfL https://get.k3s.io | sudo bash - && sudo chmod 644 /etc/rancher/k3s/k3s.yaml

@@ -1,0 +1,15 @@
+- hosts: all
+  become: yes
+  user: thiago733
+  gather_facts: no
+  pre_tasks:
+  - name: 'Atualizando o repo'
+    raw: 'apt update'
+  roles:
+  - { role: instalandoK3s, tags: ["install_k3s_role"]  }
+
+- hosts: awx
+  become: yes
+  user: thiago733
+  roles:
+  - { role: instalandoK3s, tags: ["install_k3s_role"] }
