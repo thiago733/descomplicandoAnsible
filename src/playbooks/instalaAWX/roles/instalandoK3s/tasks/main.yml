@@ -1,6 +1,6 @@
 ---
 # tasks file for instalandoK3s
-- include: instalaDocker.yml
-- include: instalaK3s.yml
-- include: instalaAWX.yml
-- include: aplicaManifesto.yml
+- include_tasks: instalaDocker.yml
+- include_tasks: instalaK3s.yml
+- include_tasks: instalaAWX.yml
+- include_tasks: aplicaManifesto.yml

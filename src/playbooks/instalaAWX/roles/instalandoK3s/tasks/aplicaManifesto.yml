@@ -4,5 +4,21 @@
     dest: /tmp
     mode: '0755'
 
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: ./obtemSenhaAWX.sh
+    dest: /tmp
+    mode: '0755'
+
 - name: Subindo o manifesto AWX
-  shell: kubectl apply -f /tmp/awx-deploy.yml && watch kubectl get pods -l "app.kubernetes.io/managed-by=awx-operator" && kubectl get secret awx-admin-password -o go-template='{{range $k,$v := .data}}{{printf "%s: " $k}}{{if not $v}}{{$v}}{{else}}{{$v | base64decode}}{{end}}{{"\n"}}{{end}}'
+  shell: kubectl apply -f /tmp/awx-deploy.yml
+
+- name: Pause for 30 seconds
+  ansible.builtin.pause:
+    seconds: 30
+    
+- name: Obtendo senha de acesso 
+  shell: sh /tmp/obtemSenhaAWX.sh && cat /tmp/senhaAWX
+  register: senhaAWX
+
+- debug: msg="{{ senhaAWX }}"
