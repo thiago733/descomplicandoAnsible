@@ -3,3 +3,4 @@
 - include: instalaDocker.yml
 - include: instalaK3s.yml
 - include: instalaAWX.yml
+- include: aplicaManifesto.yml

@@ -3,3 +3,12 @@
     src: ./baixaeInstalaCluster.sh
     dest: /tmp
     mode: '0755'
+
+- name: Copy file with owner and permissions
+  ansible.builtin.copy:
+    src: ./criaPVC.sh
+    dest: /tmp
+    mode: '0755'
+
+- name: Subindo serviço AWX
+  shell: sh /tmp/baixaeInstalaCluster.sh && sh /tmp/criaPVC.sh
