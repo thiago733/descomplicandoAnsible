@@ -1,9 +1,9 @@
 [k8s-master]
-ansible01
+192.168.1.17
 [k8s-workers]
-ansible02
-ansible03
+192.168.1.32
+192.168.1.51
 
 [k8s-workers:vars]
-K8S_MASTER_NODE_IP=ansible01
+K8S_MASTER_NODE_IP=192.168.1.17
 K8S_API_SECURE_PORT=6443
