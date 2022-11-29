@@ -9,3 +9,4 @@ id_rsa*
 *.box
 terraform.tfstate
 terraform.tfstate.backup
+infra/terraform/instalaK8s/.terraform.lock.hcl
